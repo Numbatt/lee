@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Lobster&display=swap');
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+:root {
+    background-color: rgb(156, 25, 7);
+    color: white;
+    overflow: hidden;
+}
+
+#lee1 {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 300px;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+#diego1 {
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    width: 300px;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+
+.message {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1s;
+    animation: fadeIn ease-in 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
+}
+
+.message.start {
+    position: absolute;
+    top: 7%;
+    left: 7%;
+}
+
+.message.end {
+    position: absolute;
+    bottom: 7%;
+    right: 7%;
+    -webkit-animation-delay: 2.2s;
+    animation-delay: 2.2s
+}
+
+table {
+    width: 100%;
+    height: 100%;
+}
+
+td {
+    font-family: 'Dongle', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    opacity: 10%;
+    pointer-events: none;
+    user-select: none;
+}
+
+.message.paragraph {
+    font-size: 40px;
+    position: absolute;
+    margin: 0;
+    top: 46%;
+    left: 55%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.1s
+}
+
+.button {
+    background-color: rgb(156, 33, 2);
+    border: 3px solid white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 24px;
+    font: Arial;
+    position: absolute;
+    margin: 0;
+    top: 86%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1s;
+    animation: fadeIn ease-in 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 'Lobster';
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  
+  
+  @keyframes firework {
+    0% { 
+      transform: translate(-50%, 70vh);
+      width: 0.5vmin;
+      opacity: 1;
+    }
+    50% { 
+      width: 0.5vmin;
+      opacity: 1;
+    }
+    100% { 
+      width: 45vmin; 
+      opacity: 0; 
+      display: none;
+    }
+  }
+  
+  .firework,
+  .firework::before,
+  .firework::after {
+    --top: 60vh;
+    --color1: yellow;
+    --color2: khaki;
+    --color3: white;
+    --color4: lime;
+    --color5: gold;
+    --color6: mediumseagreen;
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.5vmin;
+    aspect-ratio: 1;
+    background:
+      /* random backgrounds */
+      radial-gradient(circle, var(--color1) 0.2vmin, #0000 0) 50% 00%,
+      radial-gradient(circle, var(--color2) 0.3vmin, #0000 0) 00% 50%,
+      radial-gradient(circle, var(--color3) 0.5vmin, #0000 0) 50% 99%,
+      radial-gradient(circle, var(--color4) 0.2vmin, #0000 0) 99% 50%,
+      radial-gradient(circle, var(--color5) 0.3vmin, #0000 0) 80% 90%,
+      radial-gradient(circle, var(--color6) 0.5vmin, #0000 0) 95% 90%,
+      radial-gradient(circle, var(--color1) 0.5vmin, #0000 0) 10% 60%,
+      radial-gradient(circle, var(--color2) 0.2vmin, #0000 0) 31% 80%,
+      radial-gradient(circle, var(--color3) 0.3vmin, #0000 0) 80% 10%,
+      radial-gradient(circle, var(--color4) 0.2vmin, #0000 0) 90% 23%,
+      radial-gradient(circle, var(--color5) 0.3vmin, #0000 0) 45% 20%,
+      radial-gradient(circle, var(--color6) 0.5vmin, #0000 0) 13% 24%
+      ;
+    background-size: 0.5vmin 0.5vmin;
+    background-repeat: no-repeat;
+    animation: firework 2s forwards;
+  }
+  
+  .firework::before {
+    transform: translate(-50%, -50%) rotate(25deg) !important; 
+  }
+  
+  .firework::after {
+    transform: translate(-50%, -50%) rotate(-37deg) !important;
+  }
