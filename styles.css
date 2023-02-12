@@ -37,6 +37,7 @@
 }
 
 #lee1 {
+    opacity: 0;
     position: absolute;
     top: 50%;
     left: 15%;
@@ -53,6 +54,7 @@
     animation-delay: 1.1s
 }
 #diego1 {
+    opacity: 0;
     position: absolute;
     top: 50%;
     left: 85%;
